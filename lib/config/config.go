@@ -115,7 +115,7 @@ func dealCommon(s string) *CommonConfig {
 		} else if len(item) == 1 {
 			item = append(item, "")
 		}
-		switch item[0] {
+		switch strings.TrimSpace(item[0]) {
 		case "server_addr":
 			c.Server = item[1]
 		case "vkey":
